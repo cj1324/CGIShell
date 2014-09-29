@@ -14,7 +14,7 @@ import warnings
 try:
     import chardet
 except ImportError:
-    warnings.WarningMessage("Lack chardet, the proposed installation")
+    # warnings.warn("Lack chardet, the proposed installation")
     chardet = None
 
 
