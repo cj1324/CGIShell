@@ -1,7 +1,7 @@
 CGIShell
 ========
 
-* CVE-2014-6271 CGI POC
+* CVE-2014-6271 CGI Exploit
 * Use like OpenSSH via CGI Page
 
 Use
