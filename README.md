@@ -22,7 +22,7 @@ It is not needed `chardet`
 
 Future
 ======
-
+* HTTP Login Support
 * http transmission gzip compression
 * chardet identify and decode
 * any bug fix
