@@ -1,6 +1,7 @@
 CGIShell
 ========
 
+* [shellshock](https://shellshocker.net/)
 * CVE-2014-6271 CGI Exploit
 * Use like OpenSSH via CGI Page
 
