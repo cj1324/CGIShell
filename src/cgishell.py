@@ -100,8 +100,11 @@ class CgiShellConsole(code.InteractiveConsole):
         if cmd in ('exit', 'logout', 'quit'):
             self.write('*_* Please use Ctrl + d\n')
             return
-        message = self.fetch.injection(cmd)
-        self.write(message)
+        try:
+            message = self.fetch.injection(cmd)
+            self.write(message)
+        except IOError as e:  # TODO Verbose Error ?
+            self.write(e)
         self.write('\n')
 
     def init_history(self, histfile):
