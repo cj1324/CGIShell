@@ -1,4 +1,28 @@
 CGIShell
 ========
 
-CVE-2014-6271 CGI POC,  Use like Openssh via CGI
+* CVE-2014-6271 CGI POC
+* Use like OpenSSH via CGI Page
+
+Use
+===
+
+`python cgishell.py 'http://www.google.com/cve-2014-6271/poc.cgi'`
+
+
+Screenshot
+==========
+
+![Success](http://i.v2ex.co/5sVSEz4Yl.png "")
+
+Dependence
+==========
+
+It is not needed `chardet`
+
+Future
+======
+
+* http transmission gzip compression
+* chardet identify and decode
+* any bug fix
