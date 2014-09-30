@@ -19,11 +19,19 @@ Screenshot
 Dependence
 ==========
 
-It is not needed `chardet`
+* Windows needed `pyreadline`
+* It is not needed `chardet`
 
 Future
 ======
+
+* Add TestCase
 * HTTP Login Support
 * http transmission gzip compression
 * chardet identify and decode
 * any bug fix
+
+Issues
+======
+
+* Windows Untest
