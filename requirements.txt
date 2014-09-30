@@ -1,1 +1,2 @@
 chardet==2.2.1
+pyreadline==2.0

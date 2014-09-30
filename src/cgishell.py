@@ -4,7 +4,11 @@
 import os
 import sys
 import code
-import readline
+try:
+    import readline
+except ImportError:
+    warnings.warn("Windows needed pyreadline !!")
+    import pyreadline as readline
 import atexit
 import socket
 import uuid
