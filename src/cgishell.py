@@ -125,6 +125,9 @@ class CgiShellConsole(code.InteractiveConsole):
 
 
 def main(url):
+    # set default timeout 10s
+    socket.setdefaulttimeout(10)
+
     f = Fetch(url.strip())
     print ':) URL: {0}'.format(f.fullurl)
     try:
