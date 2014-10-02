@@ -4,6 +4,7 @@
 import os
 import sys
 import code
+import warnings
 try:
     import readline
 except ImportError:
@@ -14,16 +15,10 @@ import socket
 import uuid
 import urllib2
 import urlparse
-import warnings
 try:
     import chardet
 except ImportError:
-    # warnings.warn("Lack chardet, the proposed installation")
     chardet = None
-
-
-class InjectionCommandError(IOError):
-    pass
 
 
 class InjectionFailed(IOError):
@@ -82,8 +77,6 @@ class Fetch(object):
         result = body.split(self.uuid)
         if len(result) == 3:
             messag = result[1]
-        elif len(result) == 2:
-            raise InjectionCommandError()
         else:
             raise InjectionFailed()
         return messag
@@ -132,9 +125,6 @@ def main(url):
     print ':) URL: {0}'.format(f.fullurl)
     try:
         msg = f.injection('id')
-    except InjectionCommandError:
-        # FIXME code bug ?
-        return 1
     except InjectionFailed:
         print '*_* Injection Code Failed.'
         return 1
